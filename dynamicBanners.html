@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fooder
+</title>
+
+
+<script>
+
+function bannerclose() {
+  var x = document.getElementById("myDIV");
+  
+  if (x.style.display === "none") {
+    x.style.display = "block";
+	}
+  else {
+	x.style.display = "none";
+	//document.getElementById("open").style.display="none";
+	
+	
+	}
+}
+
+
+
+	var val= setTimeout(hid, 5000);
+	function hid(){
+		document.getElementById("myDIV").style.visibility="visible";
+	}
+	document.getElementById("myDIV").innerHTML =val;
+
+</script>
+
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+.Homepage {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+/* Create two columns that float next to eachother */
+.column2 {
+  float: left;
+  width: 33.33%;
+  margin-top: 5px;
+  padding: 20px;
+}
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 5px;
+  padding: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column h2{
+   margin-top: 0;
+   text-align: center;
+}
+.centered {
+  color:red;
+  font-size:60px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.thickLine{
+	border-top: 2px solid grey;
+	}
+a:link{
+	color:blue;
+	}
+a:visited{
+	color:darkred;}
+a:hover{
+	color:yellow;
+	background:black;}
+a:active{
+	color:green;
+	background:beige;}
+#banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 210px;
+
+}
+
+#myDIV {
+  width: 100%;
+  text-align: center;
+  background-color: lightblue;
+
+  
+}
+
+</style>
+</head> 
+<body>
+	
+	<div id="myDIV" style="visibility:hidden">	
+	
+	  Spend $10 on Wholefoods!! <div id="open" style="text-align:right;" ><button onclick="bannerclose()" >X</button></div>
+	 <a  href="https://www.wholefoodsmarket.com" target="_blank" > visit</a>
+	 
+	</div>
+	<div class="Homepage">
+	
+	
+	<a href="http://www.ehow.com" target="_blanc">
+
+				<img id="banner" src="C:\Users\HP\Downloads\strawberries.jpg" >
+			</a>
+	
+	<div class="thickLine"  </div>
+	<div class="row">
+		<div class="column">
+			<h2 style="text-align:justify">Foodar</h2>
+		</div>
+		<div class="column"  style="text-align:right;">
+			<a href="#login">Sign in / Register</a>
+		</div>
+	
+	</div>
+	<div class="thickLine" onclick= "myFunction()"> </div><br>
+	
+	
+	<img src="C:\Users\HP\Downloads\food.jpg" alt="food picture" width="100%" height="350px">
+	<div class= "centered">Try A New Meal Today</div> 
+	<br>
+	<p>Find a driver near you!</p>
+	<p>Type in your zipcode below and click Go to find a driver near you</p>
+	<input type="text" id="zipcode" name="zipcode" maxlength="5">
+	<input type="submit" value="Go!"><br><br>
+	<div class="thickLine"> </div>
+	<footer>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<div class="row">
+				<div class="column2">
+				<ul style="list-style-type:none;">
+					<li><a href="https://www.w3schools.com/" target="_blank">Home</a></li>
+					<li><a href="https://www.google.com/" target="_blank">Register</a></li>
+					<li><a href="https://www.google.com/" target="_blank">How it all works</a></li>
+				</ul>
+				</div>
+				<div class="column2"  style="text-align:center;">
+					<p><a href="https://www.google.com/"target="_blank ">Privacy Policy</a></p>
+					<p><a href="https://www.google.com/" >Terms & Conditions</a></p>
+				</div>
+				<div class="column2" style="text-align:right;">
+					 <p>Super Delicious!</p>
+				</div>
+		</div>
+		
+		
+	</footer>
+
+</div>
+</body>
+</HTML>
+

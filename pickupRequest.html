@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Foodar PICKUP Request
+</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    
+}
+h1{
+	text-transform:uppercase;
+	}
+.pickup{
+	
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 10px;
+  }
+
+table{
+	
+	border: 1px solid black;
+	
+}
+.column {
+  float: left;
+  width: 25%;
+ padding-left: 50px;
+
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#p1 {float: left;
+	text-align:center;
+    border: 2px solid black;
+	width:120px;
+	
+}
+.thickLine{
+	border-top: 2px solid black;
+	width:65%;
+	}
+
+
+</style>
+</head>
+<body>
+<script>
+  var result=0; 
+function myFunction() {
+
+  var x =document.getElementsByClassName("price");
+  var y=document.getElementsByClassName("tip");
+ 
+ 
+  for(var i=0;i< x.length;i++){
+	for(var j=0;j< y.length;j++){
+		if(x[i].checked && y[j].checked){
+			var value1=Number(x[i].value);
+			var value2=Number(y[j].value);
+			result = value1 + (value1 * value2);
+			//console.log(result);
+			//confirm("The Total is:  " + result);
+		
+			
+		
+				document.getElementsByClassName("total")[0].value=result;
+				alert("the total is: " + result);
+				//break;
+				
+		}
+				
+				
+	}
+		
+
+	
+  }	
+
+}
+
+function alertUser(){
+	var value1=document.getElementsByClassName("total")[0].value;
+	console.log(value1);
+	if(value1>1){
+		alert("your information is submitted");}
+	else{
+		//var request = document.getElementById("num");
+		
+		//request.addEventListener("click", function() {
+	
+			alert("Please select two options");
+	
+		//});
+		//request.addEventListener("click", function);
+	}
+}
+
+</script>
+<form>
+
+
+
+<div class="pickup">
+	<h1>submit your request</h1>
+	<p>Please fill out the form below</p><br>
+	
+	<label style="padding-left: 20px;">Address</label><br><br>
+	<div style="padding-left: 50px;">
+		<input type ="email" size="50"/>
+	</div>
+	<br>
+	<label style="padding-left:20px;">Choose your style</label><br><br>
+	<div class="row"> 
+		<div class="column" >
+			<div id="p1">
+				<p style="padding-bottom:10px;" > <b>Classic</b><br><small>This is Classic 
+				treatment</small><br><input type="radio" class="price" name="pickup" value="3"></p>
+			</div>
+		</div>
+
+		<div class="column">
+			<div id="p1">
+				<p style="padding-bottom:10px;"><b>Premium</b> <br>
+				<small>Pinky's up</small><br><br><input type="radio" value="5"  name="pickup" class="price"></p>
+			</div>
+		</div>
+		<div class="column">
+			<div id="p1">
+				<p><b>Royal</b> <br>
+				<small>Your food is served on a silver platter Literaly</small><br><input type="radio" value="10"  name="pickup" class="price"></p>
+			</div>
+		</div>
+			
+	</div>
+	<br><br>
+	<label style="padding-left: 20px;">Restaurant</label><br><br>
+	<div style="padding-left: 50px;">
+		<input type ="text" size="40"/>
+	</div>
+	<br>
+	<label style="padding-left:20px;">Tip</label>
+	<div class="row">
+		<div class="column">
+			<div id="p1" >
+				<p style="padding-bottom:10px;" ><b>10%</b><br><small>They did their job</small><br><br><input type="radio" class="tip"
+				name="order" value="0.10"  onclick="myFunction()" ></p>
+			</div>
+		</div>
+		<div class="column">
+			<div id="p1"> 
+				<p style="padding-bottom:15px;"><b>15%</b><br><small>They made you feel special</small><br><input type="radio" value="0.15" name="order" class="tip" onclick="myFunction()" ></p>
+			</div>
+		</div>
+		<div class="column">
+			<div id="p1"> 
+				<p style="padding-bottom:5px;"><b>20%</b><br><small>I wanna give them more,but this is ok I have</small><br><input type="radio" value="0.20" name="order" class="tip" onclick="myFunction()"></p>
+			</div>
+		</div>
+	</div><br>
+	<div>
+		<p    style="margin-left:400px;">Total:<input style="border-style:none;" type="text" class="total"   value=""   </p><br>
+		<div style="margin-left:400px;">
+			<input type="button" id="num" name="val"   value="Request"  onclick="alertUser()">
+		</div> 
+	</div><br>
+	<div class="thickLine"> </div>
+</div>
+</form>
+</body>
+</html>

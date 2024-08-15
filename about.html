@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script type="text/javascript">  
+		var b=document.getElementById("zipcode").value;
+        function CheckIndianZipCode(b)   {  
+        var a = /(^\d{6}$)/;  
+        if (a.test(b))   
+        {  
+            alert("Your Entered Zip Code Is Valid.")  
+        }   
+        else   
+        {  
+            alert("Your Entered Zip Code Is Not Valid.")  
+        }  
+    }
+<div style="margin-bottom: 10px;">
+  <form> 
+    <label for="zip">Find the closest location: </label> 
+    <input type="text" id="zipsearch_zip" placeholder="Zip Code" /> 
+    <button id="zipsearch_search">Go</button> 
+    <span style="color: red; visibility: hidden;" id="zipsearch_error">Please enter a valid 5-digit US zip code.</span>
+  </form>
+</div>	
+      </script> 
+<style>
+* {
+  box-sizing: border-box;
+}
+.Homepage {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 5px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column h2{
+   margin-top: 0;
+   text-align: center;
+}
+.centered {
+  color:red;
+  font-size:60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.thickLine{
+	border-top: 5px solid grey;
+	}
+a:visited{
+	color:darkred;}
+a:hover{
+	color:yellow;
+	background:black;}
+a:active{
+	color:green;
+	background:beige;}
+</style>
+</head> 
+<body>
+<div class="Homepage">
+	<h1 style= "text-align:center;">Banner Information</h1>
+	<div class="thickLine"> </div>
+	<div class="row">
+		<div class="column">
+			<h2 style="text-align:justify">Foodar</h2>
+		</div>
+		<div class="column"  style="text-align:right;">
+			<a href="file:///C:/Users/HP/Desktop/Register.html" target="_blanc">Sign in / Register</a>
+		</div>
+	
+	</div>
+	<div class="thickLine"> </div><br>
+	<img src="C:\Users\HP\Downloads\food.jpg" alt="food picture" width="100%" height="350"/>
+	<div class= "centered">Try A New Meal Today</div> <br>
+	<p>Find a driver near you!</p>
+	<p>Type in your zipcode below and click Go to find a driver near you</p>
+	<input type="text" id="zipcode" name="zipcode" maxlength="5" >
+	<input  type="submit" value="Go!" onclick="CheckIndianZipCode()"><br><br>
+	<div class="thickLine"> </div>
+	<footer>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<div class="row">
+		
+		<div class="column">
+			<i class="fa fa-facebook" style="padding: 10px;
+			font-size: 10px;
+			width: 10px;
+			text-decoration: none;
+			background-color:white;
+			border-radius:50%;"></i>
+			<i class="fa fa-twitter" style="padding: 10px;
+			font-size: 10px;
+			width: 10px;
+			text-decoration: none;
+			background-color:white;
+			border-radius:50%;"></i>
+		</div>
+		<div class="column"  style="text-align:right;">
+			<p>Copyright &copy 2020 All rights reserved;</p>
+			<p><a href="C:/Users/HP/Desktop/homepage.html"  target="_blank">Home</a></p>
+			<p><a href="https://www.google.com/"  target="_blank">Privacy Policy</a></p>
+			<p><a href="https://www.google.com/"  target="_blank">Terms & Conditions</a></p>
+		</div>
+		
+	</footer>
+
+</div>
+</body>
+</HTML>

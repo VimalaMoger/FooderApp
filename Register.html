@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+.Homepage {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+
+.yy{
+margin: 0 130px;
+}
+label {
+
+  display: inline-block;
+  width: 100px;
+  /*text-align: right; */
+  }​
+a:link{
+	color:blue;
+	}
+a:visited{
+	color:darkred;}
+a:hover{
+	color:yellow;
+	background:black;}
+a:active{
+	color:green;
+	background:beige;}
+footer{
+	border: 0px ;
+	}
+
+</style>
+</head>
+
+<body>
+<p1>Details:</p1>
+
+<form>
+<div class="Homepage">
+	<h1  style="color:red; padding:40px; margin:0;text-align:center;">Please fill out the form below</h1>
+
+	<fieldset>
+		<legend> User Credentials</legend>
+		<label>Email:</label> <input type ="email" /><br><br>
+ 
+		<label>Password:</label> <input type ="password" /><br><br>
+
+		<label>First Name:</label> <input type ="text" /><br><br>
+
+		<label>Last Name:</label> <input type ="text" /><br><br>
+	</fieldset>
+
+	<fieldset>
+		<legend>Address Info</legend>
+		<label for = "address" /> Address:</label>
+		<input type ="text" name="address"/><br><br>
+		<label for ="street"/> Street: </label>
+		<input type ="text" name="street"/><br><br>
+		<label for ="state" /> State:</label>
+		<select id="state" name=state">
+		<option value="VA"> VA</option>
+		<option value="MD"> MD</option>
+		<option value="DC"> DC</option>
+		</select><br><br>
+		<label for="zipcode" /> Zipcode:</label>
+		<input type ="text" id="zipcode" name="address-4" maclength="5" </label> <br><br>
+		<button class ="yy" type="submit"> Register</button>
+	</fieldset>
+	<div style="text-align:center;">
+	<footer>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+		<p><a href="https://www.w3schools.com/" target="_blank">Home</a></p>
+		<p><a href="https://www.google.com/"  target="_blank">Privacy Policy</a></p>
+		<p><a href="https://www.google.com/"  target="_blank">Terms & Conditions</a></p>
+
+		<i class="fa fa-facebook" style="padding: 10px;
+		font-size: 10px;
+		width: 10px;
+		text-decoration: none;
+		background-color:white;
+		border-radius:50%;"></i>
+		<p>Copyright &copy 2020 All rights reserved;</p>
+	</div>
+	</footer>
+</div>
+
+
+
+ 
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fooder</title>
+
+<script>
+function zipCodeChecker(){
+
+	var givenlist=[78717,78727,78757,78769,78747];
+	for (var i=0;i<=4;i++){
+		var codeentered=Number(document.getElementsByClassName("zipcode")[0].value);
+		//console.log(codeentered);
+		if(codeentered == givenlist[i])	{
+			alert("We’ve got your area covered!");
+			
+			break;
+			}
+		else{
+			alert("Sorry, we haven’t expanded to that area yet.");
+			break;
+			}
+	}
+}
+
+function alerT(){
+	document.getElementById("alerT").addEventListener("click", zipCodeChecker);
+	//document.getElementById("alerT").removeEventListener("click", zipCodeChecker);
+			
+}
+</script>
+
+
+<style>
+
+
+* {
+  box-sizing: border-box;
+}
+.Homepage {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+/* Create two columns that float next to eachother */
+.column2 {
+  float: left;
+  width: 33.33%;
+  margin-top: 5px;
+  padding: 20px;
+}
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 5px;
+  padding: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column h2{
+   margin-top: 0;
+   text-align: center;
+}
+.centered {
+  color:red;
+  font-size:60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.thickLine{
+	border-top: 10px solid grey;
+	}
+a:link{
+	color:blue;
+	}
+a:visited{
+	color:darkred;}
+a:hover{
+	color:yellow;
+	background:black;}
+a:active{
+	color:green;
+	background:beige;}
+#banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 200px;
+
+}
+.hide {
+  display: none;
+}
+.hoverOver:hover + .hide {
+  display: block;
+  color: red;
+}
+</style>
+</head> 
+<body>
+<div class="Homepage">
+	<img id="banner" src="C:\Users\HP\Downloads\strawberries.jpg" alt="Banner Image"/>
+	<!--<h1 style= "text-align:center;">Banner Information</h1>-->
+	<div class="thickLine"> </div>
+	<div class="row">
+		<div class="column">
+			<h2 style="text-align:justify">Foodar</h2>
+		</div>
+		<div class="column"  style="text-align:right;">
+			<a href="#login">Sign in / Register</a>
+		</div>
+	
+	</div>
+	<div class="thickLine"> </div><br>
+	<div class="hoverOver">
+	<img src="C:\Users\HP\Downloads\food.jpg" alt="food picture" width="100%" height="350px">
+	<div class= "centered">Try A New Meal Today</div> 
+	</div>
+	<div class="hide">find out coupon 10%on food</div>
+	<p>Find a driver near you!</p>
+	<p>Type in your zipcode below and click Go to find a driver near you</p>
+	<input type="text" class="zipcode" name="zipcode" value="" maxlength="5" >
+	
+	<input  type="submit"  id="alerT" value="Go!"  onclick="alerT()" ><br><br> 
+	<!-- <button id="alerT" onclick="alerT()" >Go!</button -->
+	<div class="thickLine"> </div>
+	<footer>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<div class="row">
+				<div class="column2">
+				<ul style="list-style-type:none;">
+					<li><a href="https://www.w3schools.com/" target="_blank">Home</a></li>
+					<li><a href="https://www.google.com/" target="_blank">Register</a></li>
+					<li><a href="https://www.google.com/" target="_blank">How it all works</a></li>
+				</ul>
+				</div>
+				<div class="column2"  style="text-align:center;">
+					<p><a href="https://www.amazon.com/"target="_blank ">Privacy Policy</a></p>
+					<p><a href="https://www.google.com/" >Terms & Conditions</a></p>
+				</div>
+				<div class="column2" style="text-align:right;">
+					 <p>Super Delicious!</p>
+				</div>
+		</div>
+		
+		
+	</footer>
+
+</div>
+</body>
+</HTML>
