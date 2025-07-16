@@ -56,7 +56,7 @@
 
 > ***pickupRequest.html***
   * Contains serving style and tips layout using html and css
-  * Validates if cart is empty and redirects to Home page
+  * Validates if cart is empty using jquery and redirects to Home page
   * If cart contains items and prints the total on screen
   * Request button pops a message about order completed and
   * directs user back to Home page
