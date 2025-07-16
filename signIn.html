@@ -17,7 +17,7 @@
 					alert("Name and email both required ");
 					return false;
 				}
-				if(userName == null || userName !== firstName){
+				if(userName === null || userName !== firstName){
 					alert("If you are a new user, Please register to sign in");
 
 					var frm = document.getElementsByName('contact-form')[0];
@@ -32,7 +32,7 @@
 
 				//redirect url to displayItems page
 				var url = "displayItems.html";
-                window.location.href =url;			
+                		window.location.href =url;			
 			}
 		</script>
 	</head>
