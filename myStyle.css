@@ -1,0 +1,138 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.Homepage {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to each other */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 5px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column h2{
+   margin-top: 0;
+   text-align: center;
+}
+
+.centered {
+  color:red;
+  font-size:60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.thickLine{
+	border-top: 5px solid grey;
+}
+
+a:visited{
+	color:darkred;
+}
+
+a:hover{
+	color:yellow;
+	background:black;
+}
+
+a:active{
+	color:green;
+	background:beige;
+}
+
+/* Create two columns that float next to each other */
+.column2 {
+  float: left;
+  width: 33.33%;
+  margin-top: 5px;
+  padding: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.hoverOver:hover + .hide {
+  display: block;
+  color: red;
+}
+
+.emojify::before {
+  content: '😎 😄 🤓';
+}
+
+.emojify::after {
+  content: '😎 😄 🤓';
+}
+
+#myDIV {
+  width: 100%;
+  background-color: blanchedalmond;  
+}
+
+#food{
+  font-size: 30px;
+  color: red;
+  text-align: center;
+}
+
+#banner{
+  width:600px;
+  height: 50px;
+  text-align: center;
+  border: solid 2px;
+  margin:auto;
+  border-radius: 4rem;
+  box-shadow: 0 0 10px rgb(224, 34, 177);
+}
+
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+#cList{
+  color: black;
+}
+
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 5s linear infinite;
+}
+
+.marquee p {
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

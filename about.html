@@ -1,124 +1,141 @@
 <!DOCTYPE html>
-<html>
-<head>
- <script type="text/javascript">  
-	var b=document.getElementById("zipcode").value;
-        function CheckIndianZipCode(b)   {  
-        var a = /(^\d{6}$)/;  
-        if (a.test(b))   
-        {  
-            alert("Your Entered Zip Code Is Valid.")  
-        }   
-        else   
-        {  
-            alert("Your Entered Zip Code Is Not Valid.")  
-        }  
-    }
-<div style="margin-bottom: 10px;">
-  <form> 
-    <label for="zip">Find the closest location: </label> 
-    <input type="text" id="zipsearch_zip" placeholder="Zip Code" /> 
-    <button id="zipsearch_search">Go</button> 
-    <span style="color: red; visibility: hidden;" id="zipsearch_error">Please enter a valid 5-digit US zip code.</span>
-  </form>
-</div>	
-      </script> 
-<style>
-* {
-  box-sizing: border-box;
-}
-.Homepage {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
-}
-/* Create two columns that float next to eachother */
-.column {
-  float: left;
-  width: 50%;
-  margin-top: 5px;
-  padding: 20px;
-}
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<title>About Page</title>
+		<link rel="stylesheet" href="myStyle.css" /> 
+	</head> 
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.column h2{
-   margin-top: 0;
-   text-align: center;
-}
-.centered {
-  color:red;
-  font-size:60px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.thickLine{
-	border-top: 5px solid grey;
-	}
-a:visited{
-	color:darkred;}
-a:hover{
-	color:yellow;
-	background:black;}
-a:active{
-	color:green;
-	background:beige;}
-</style>
-</head> 
-<body>
-<div class="Homepage">
-	<h1 style= "text-align:center;">Banner Information</h1>
-	<div class="thickLine"> </div>
-	<div class="row">
-		<div class="column">
-			<h2 style="text-align:justify">Foodar</h2>
-		</div>
-		<div class="column"  style="text-align:right;">
-			<a href="file:///C:/Users/HP/Desktop/Register.html" target="_blanc">Sign in / Register</a>
-		</div>
-	
-	</div>
-	<div class="thickLine"> </div><br>
-	<img src="C:\Users\HP\Downloads\food.jpg" alt="food picture" width="100%" height="350"/>
-	<div class= "centered">Try A New Meal Today</div> <br>
-	<p>Find a driver near you!</p>
-	<p>Type in your zipcode below and click Go to find a driver near you</p>
-	<input type="text" id="zipcode" name="zipcode" maxlength="5" >
-	<input  type="submit" value="Go!" onclick="CheckIndianZipCode()"><br><br>
-	<div class="thickLine"> </div>
-	<footer>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<div class="row">
-		
-		<div class="column">
-			<i class="fa fa-facebook" style="padding: 10px;
-			font-size: 10px;
-			width: 10px;
-			text-decoration: none;
-			background-color:white;
-			border-radius:50%;"></i>
-			<i class="fa fa-twitter" style="padding: 10px;
-			font-size: 10px;
-			width: 10px;
-			text-decoration: none;
-			background-color:white;
-			border-radius:50%;"></i>
-		</div>
-		<div class="column"  style="text-align:right;">
-			<p>Copyright &copy 2020 All rights reserved;</p>
-			<p><a href="C:/Users/HP/Desktop/homepage.html"  target="_blank">Home</a></p>
-			<p><a href="https://www.google.com/"  target="_blank">Privacy Policy</a></p>
-			<p><a href="https://www.google.com/"  target="_blank">Terms & Conditions</a></p>
-		</div>
-		
-	</footer>
+	<body>
+		<div class="Homepage">
 
-</div>
-</body>
+			<!--Banner Information and animated text-->
+			<div>
+				<div id="myDIV" style="visibility:hidden">
+					Spend $10 on Wholefoods!!
+					<div id="open" style="text-align:right;" ><button onclick="bannerclose()" >X</button></div>
+					<a  href="https://www.wholefoodsmarket.com" target="_blank" > visit</a>
+				</div>
+			</div>
+			<div class="thickLine"> </div>
+
+			<!--Banner info-->
+			<div style="display: flex;">				
+				<h2 style="text-align:left">Foodar</h2>								
+				<h1 id="banner" >Delicious Food Service</h1>	
+			</div>
+			<p id="signIn-button">Hello User</p>
+			<div class="thickLine"> </div><br>
+
+			<!--Home page site image-->
+			<img src="images/HImg.jpg" alt="about page" width="100%" height="350"/>
+			<div class= "centered">Try A New Meal Today</div> <br>
+
+			<!--Validate zipcode to find driver near desired location-->
+			<p>Find a driver near you!</p>
+			<p>Type in your zipcode below and click Go to find a driver near you</p>
+			
+			<form name="contact-form" onsubmit="checkZipCode()">
+				<fieldset>
+					<label for="zipcode">Find the closest location: </label> 
+					<input type ="zipcode" id="zipcode" name="zipcode" required required maxlength="5" />
+					<input type="submit" value="submit" /><br><br>
+				</fieldset>								
+		    </form>
+			<div id="driver"></div>
+			<div class="thickLine"> </div>
+
+			<!--Footer section-->
+			<footer>
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<div class="row">
+				
+				<div class="column">
+					<i class="fa fa-facebook" style="padding: 10px;
+					font-size: 10px;
+					width: 10px;
+					text-decoration: none;
+					background-color:white;
+					border-radius:50%;"></i>
+					<i class="fa fa-twitter" style="padding: 10px;
+					font-size: 10px;
+					width: 10px;
+					text-decoration: none;
+					background-color:white;
+					border-radius:50%;"></i>
+				</div>
+				<!--policy & terms links-->
+				<div class="column"  style="text-align:right;">
+					<p>Copyright &copy 2020 All rights reserved;</p>
+					<p><a href="index.html">Home</a></p>
+					<p><a href="resource/policy.html"  target="_blank">Privacy Policy</a></p>
+					<p><a href="resource/terms.html"  target="_blank">Terms & Conditions</a></p>
+				</div>				
+			</footer>
+		</div>
+
+
+		<!-- javascript code -->
+		<script type="text/javascript">
+			let user = localStorage.getItem("userName");
+			$(function(){
+				if(user){
+					$("#signIn-button").text(`Hello ${user} !`);
+					$("#signIn-button").show();
+					$("#signIn-button").css({'color': 'blue','font-size':'35px'});
+					$("#signIn-button").append("<em> <a href=\"displayItems.html\">MenuList</a></em>");
+				}
+			});
+			//array data, animated text
+			const myBanner = new Array('Oven-Baked Pastas', 'Oven-Baked Sandwiches', 'Specialty Pizzas','Breads & Dips', 'Desserts','Drinks');
+			let banner = 0;
+			//animation
+			function ShowBanners(){ 
+				if (document.images){ 
+					banner++;
+					if (banner === myBanner.length) {
+						banner = 0;
+					}
+					document.getElementById('food').innerHTML = myBanner[banner];
+					setTimeout("ShowBanners()",1000);
+				}
+			}  
+
+			//close the 
+			function bannerclose() {
+				var x = document.getElementById("myDIV");
+					
+				if (x.style.display === "none") {
+					x.style.display = "block";
+				}
+				else {
+					x.style.display = "none";
+					//document.getElementById("open").style.display="none";	
+				}
+			}
+
+			function hid(){
+				document.getElementById("myDIV").style.visibility="visible";
+			}
+			var val = setTimeout(hid, 5000);
+			var b = document.getElementById("myDIV").value;
+			
+			//Check driver availability in that area
+			var zipcodeList = [78717, 78727, 78757, 78769, 78747];
+			
+			function checkZipCode(){
+				for(const i of zipcodeList)	{
+					var codeEntered = document.getElementById("zipcode").value;
+					const result = zipcodeList.find(num => num == codeEntered);
+					if(result === undefined){												
+						document.getElementById("driver").innerHTML = "Driver is not available!";							
+					}else{											
+						document.getElementById("driver").innerHTML = "Driver is available!";						 
+					}
+				}				
+			}	
+		</script>
+	</body>
 </HTML>

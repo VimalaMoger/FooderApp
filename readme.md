@@ -1,0 +1,92 @@
+# Project Contents
+
+## ***_FooderApp_:***
+
+<br>
+<br>  
+
+> ***index.html:***
+
+* Added jQuery feature to print user name on screen and a link to displayItems page.    
+* Includes animated banner text and checkZipcode functions.    
+* Attached other links like policy, terms and About  
+* Added validation check for zipcode in Javascript and html attributes.
+
+<br>
+<br>
+
+> ***about.html:***
+
+  * Inserted zipcode validation function using array find and html attributes
+  * Displays user name, promotional text message and closeBanner button
+  * Adds in jQuery code for user name retrieval and display on screen
+  * Provided a link to displayItems page upon user validation
+
+<br>
+<br>
+
+> ***register.html***
+  * Saves form data in Local Storage in a web browser
+  * Validates fewer form fields, if fails, user re-enters all the required info
+  * Validates the fields, if passes, directs user to Sign In page
+  
+<br>
+<br>
+  
+> ***signIn.html***
+  * Retrieves data from Local Storage in a web browser
+  * Validates the form fields, if fails, sends user back to register page
+  * Validates all the fields, if passes, directs user to displayItems page
+  
+<br>
+<br>
+
+> ***displayItems.html***
+
+  * Uses AngularJS ng-repeat to iterate over array collection
+  * Contains running text across the screen at the top
+  * Created Customized text using JavaScript template string
+  * Prints array items in a tabular form along with checkbox next to row
+  * Calculates the total upon number of selected checkboxes
+  * Stored the total amount in total variable in Local Storage in a web browser
+  * Provides a link to pickupRequest page to complete the order
+  
+<br>
+<br> 
+
+> ***pickupRequest.html***
+  * Contains serving style and tips layout using html and css
+  * Validates if cart is empty and redirects to Home page
+  * If cart contains items and prints the total on screen
+  * Request button pops a message about order completed and
+  * directs user back to Home page
+
+<br>
+<br>
+
+### Libraries a
+
+```js
+ - Included jQuery and AngularJS
+ ```
+
+<br>
+<br>
+
+## References
+<details>
+
+  [StackOverflowQ/A](https://stackoverflow.com  "QA")<br>
+  [W3Schools](https://www.w3schools.com)<br>
+  [GoogleSearch](https://www.google.com)
+</details>
+
+<br>
+<br>
+
+### View links:
+
+[View](https://joyful-froyo-d371d7.netlify.app/)
+
+
+
