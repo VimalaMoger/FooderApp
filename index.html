@@ -3,73 +3,28 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>		
+		<link rel="stylesheet" href="css/myStyle.css" />
+		<script src="foodarJS/index.js"></script>
 		<title>Fooder</title>
-
-		<script>
-			let user = localStorage.getItem("userName");
-			$(function(){
-				if(user){
-					$(".checkLoggedIn").hide();
-					$("#signIn-button").text(`Hello ${user}`);
-					$("#signIn-button").css({'color': 'blue','font-size':'35px'});
-					$("#signIn-button").append("<em> <a href=\"displayItems.html\">MenuList</a></em>");
-				}
-			});
-			const myBanner = new Array('Oven-Baked Pastas', 'Oven-Baked Sandwiches', 'Specialty Pizzas','Breads & Dips', 'Desserts','Drinks');
-			let banner = 0;
-			function ShowBanners(){ 
-				if (document.images){ 
-					banner++;
-					if (banner==myBanner.length) {
-						banner = 0;
-					}
-					document.getElementById('food').innerHTML = myBanner[banner];
-					setTimeout("ShowBanners()",1000);
-				}
-			}
-
-			function zipCodeChecker(){
-							
-				var zipcodeList = [78717,78727,78757,78769,78747];
-
-				for (var i=0;i<=4;i++){			
-					var codeEntered = Number(document.getElementById("zipcode").value);
-					if(codeEntered == zipcodeList[i])	{
-						alert("We’ve got your area covered!");						
-						break;
-						}
-					else{
-						alert("Sorry, we haven’t expanded to that area yet.");
-						break;
-						}
-				}
-				var frm = document.getElementsByName('contact-form')[0];
-				frm.reset();
-			}
-
-		</script>
-		<link rel="stylesheet" href="myStyle.css" />
 	</head> 
 
 	<body onload="ShowBanners()">
+
 		<div class="Homepage">
-			
+
 			<h1 style= "text-align:center;">Delicious Food Service</h1>
 			<p id="food" class="emojify" width="900" height="120" name="ChangeBanner">Oven-Baked Pastas</p>
 			
+			<div class="checkLoggedIn" style="text-align: right;font-size: 20px;">
+				<a href="foodarPages/signIn.html">Sign In</a><span style="color: black;">/</span>
+				<a href="foodarPages/register.html">Register</a>
+			</div>
 			<div class="thickLine"> </div>
 
 			<div class="row">
-				<div class="column">
-					<h2 style="text-align:justify">Foodar</h2>
-				</div>
-				<p id="signIn-button" style="text-align: right;"></p>
-				
-				<div class="checkLoggedIn" style="justify-content:right; display: flex;">
-					<a href="signin.html">Sign in</a><span style="color: black;">/</span>
-					<a href="register.html">Register</a>
-				</div>
+				<h2>Foodar</h2>
+				<p id="signIn-button"></p>				
 			</div>
 			
 			<div class="thickLine"> </div><br>
@@ -79,12 +34,13 @@
 				<div class= "centered">Try A New Meal Today</div> 
 			</div>
 
-			<div class="hide">find out coupon 10%on food</div><br><br>
+			<div class="hide">find out coupon 10% on food</div><br><br>
 			
 			<form name="contact-form" onsubmit="zipCodeChecker()">
 				<fieldset>
 					<label for="zipcode">Find the closest location: </label> 
-					<input type ="zipcode" id="zipcode" name="zipcode" required required maxlength="5" />
+					<input type ="zipcode" id="zipcode" name="zipcode" pattern="[0-9]{5}" placeholder="Please enter a 5-digit number" 
+					required maxlength="5" />
 					<input type="submit" value="submit" /><br><br>
 				</fieldset>				
 		    </form>
@@ -95,15 +51,13 @@
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 				<div class="row">
 						<div class="column2">
-						<ul style="list-style-type:none;">
-							<li><a href="about.html">About</a></li>
-							<li><a href="register.html">Register</a></li>
-							<li><a href="https://www.eHow.com/" target="_blank">How it all works</a></li> 
-						</ul>
+							<h3><a href="foodarPages/about.html">About</a></h3>
 						</div>
+						
 						<div class="column2"  style="text-align:center;">
-							<p><a href="resource/policy.html" target="_blank">Privacy Policy</a></p>
-							<p><a href="resource/terms.html" target="_blank">Terms & Conditions</a></p>
+							<p>Copyright &copy 2020 All rights reserved;</p>
+							<p><a href="resource/policy.html"  target="_blank">Privacy Policy</a></p>
+							<p><a href="resource/terms.html"  target="_blank">Terms & Conditions</a></p>
 						</div>
 						<div class="column2" style="text-align:right;">
 							<p>Super Delicious!</p>
@@ -112,5 +66,5 @@
 			</footer>
 
 		</div>
-	</body>
+</body>
 </HTML>

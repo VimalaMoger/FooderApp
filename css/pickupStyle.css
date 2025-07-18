@@ -1,41 +1,45 @@
 * {
-    box-sizing: border-box;
-    
+  box-sizing: border-box;    
 }
+
 h1{
 	text-transform:uppercase;
-	}
-.pickup{
-	
+}
+
+.pickup{	
   border-radius: 5px;
   background-color: #ffffff;
   padding: 10px;
-  }
-
-table{
-	
-	border: 1px solid black;
-	
 }
+
+table{	
+	border: 1px solid black;	
+}
+
 .column {
   float: left;
   width: 25%;
- padding-left: 50px;
-
+  padding-left: 50px;
 }
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
+
 #p1 {float: left;
 	text-align:center;
-    border: 2px solid black;
+  border: 2px solid black;
 	width:120px;
-	
 }
+
 .thickLine{
 	border-top: 2px solid black;
 	width:65%;
-	}
+}
+
+input:invalid {
+  border: 1px solid #FF0000;
+}

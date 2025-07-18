@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Display Menu Items </title>
+        <meta name = "viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset = utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <link rel="stylesheet" href="../css/myStyle.css" />
+        <script src="../foodarJS/displayItems.js"></script>
+        <h3><a href="../index.html">Home page</a></h3>
+    </head>
+    
+    <body style="color:blue" ng-app="myApp" ng-controller="myController">
+
+        <h1 style= "text-align:center;">Delicious Food Service</h1>
+        <div class="wrapper">
+            <div id="food" class= "marquee">
+                <p>
+                    Restaurant Style Served with a salad😊 Appetizers Free😎 Special order for Snacks, Menu change.. Limited Time Only 
+                </p>  
+                <p>
+                    Restaurant Style Served with a salad😊 Appetizers Free😎 Special order for Snacks, Menu change.. Limited Time Only 
+                </p>  
+            </div>
+        </div>		
+            
+        </div>
+        <div class="thickLine"> </div><br>
+
+        <p1 id="hello"></p1> 
+        <h2 id="cList">List: </h2>
+
+        <!-- product items in tabular form-->
+        <table id="target" cellpadding="2" cellspacing="2"  background-color="#dfdfdf" width="30%" >
+            <thead id="cList">
+                <tr>
+                    <th>Item ID:</th>
+                    <th>Item Name:</th>
+                    <th>Item Price:</th>
+                    <th>Select:</th>
+                </tr>             
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="item in items">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.price}}</td>
+                    <td><input type="checkbox" id="row-checkbox" name={{item.name}} value="1"/></td>               
+                </tr>
+            </tbody>           
+        </table>
+        <br>  
+        <button type="button" onclick="getPrice()">Add to Cart</button> 
+            
+        <br><br>
+        <div id="suggestion-container" style="position: relative; display: inline-block;">
+        <span class="font-size: 20px;">💡</span>
+
+        <span id="tooltip-text" style="visibility: hidden; position: absolute; background-color: #333; color: #fff; padding: 5px; border-radius: 5px; bottom: 125%; left: 50%; transform: translateX(-50%); white-space: nowrap;">
+            May i suggest?
+        </span>
+
+        <button onmouseover="showSuggestion()" onmouseout="hideSuggestion()">Looking for something yummy ? 
+            <a  href="https://www.wholefoodsmarket.com/products/desserts" target="_blank" > visit </a>
+        </button><br><br>
+
+        <div class="thickLine"></div>    
+    </body>
+</html>
+
+
+
+

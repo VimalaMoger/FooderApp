@@ -5,7 +5,7 @@
 <br>
 <br>  
 
-> ***index.html:***
+> ***index.html & index.js:***
 
 * Added jQuery feature to print user name on screen and a link to displayItems page.    
 * Includes animated banner text and checkZipcode functions.    
@@ -15,7 +15,7 @@
 <br>
 <br>
 
-> ***about.html:***
+> ***about.html & about.js:***
 
   * Inserted zipcode validation function using array find and html attributes
   * Displays user name, promotional text message and closeBanner button
@@ -25,7 +25,7 @@
 <br>
 <br>
 
-> ***register.html***
+> ***register.html & register.js***
   * Saves form data in Local Storage in a web browser
   * Validates fewer form fields, if fails, user re-enters all the required info
   * Validates the fields, if passes, directs user to Sign In page
@@ -33,7 +33,7 @@
 <br>
 <br>
   
-> ***signIn.html***
+> ***signIn.html & signIn.js:***
   * Retrieves data from Local Storage in a web browser
   * Validates the form fields, if fails, sends user back to register page
   * Validates all the fields, if passes, directs user to displayItems page
@@ -41,7 +41,7 @@
 <br>
 <br>
 
-> ***displayItems.html***
+> ***displayItems.html & displayItems.js:***
 
   * Uses AngularJS ng-repeat to iterate over array collection
   * Contains running text across the screen at the top
@@ -54,7 +54,7 @@
 <br>
 <br> 
 
-> ***pickupRequest.html***
+> ***serviceRequest.html & serviceRequest.js:***
   * Contains serving style and tips layout using html and css
   * Validates if cart is empty and redirects to Home page
   * If cart contains items and prints the total on screen
@@ -64,7 +64,7 @@
 <br>
 <br>
 
-### Libraries a
+### Libraries
 
 ```js
  - Included jQuery and AngularJS
@@ -86,7 +86,9 @@
 
 ### View links:
 
-[View](https://joyful-froyo-d371d7.netlify.app/)
+![FoodarApp](/images/homepage.jpg)
+
+[View](https://sweet-torte-0bf6bc.netlify.app/)
 
 
 
