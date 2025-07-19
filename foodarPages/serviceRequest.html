@@ -1,3 +1,4 @@
+<<<<<<< HEAD:foodarPages/serviceRequest.html
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -95,3 +96,137 @@
 	</body>
 	<h3><a href="../index.html">Home page</a></h3>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Foodar PICKUP Request</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<link rel="stylesheet" href="pickupStyle.css" />
+		<p><a href="displayItems.html">Previous page</a></p>
+	</head>
+	<body>
+		<script>
+			//result calculation based upon selected options
+			var result = 0; 
+			function myFunction() {
+
+				var x =document.getElementsByClassName("price");
+				var y=document.getElementsByClassName("tip");				
+				
+				for(var i=0;i< x.length;i++){
+
+					for(var j=0;j< y.length;j++){
+
+						if(x[i].checked && y[j].checked){
+
+							var value1 = Number(x[i].value);
+							var value2 = Number(y[j].value);
+							if(result < 1){
+								result = value1 + (value1 * value2);
+							}										
+						}			
+					}
+				}
+				let num = JSON.parse(localStorage.getItem("total"));
+							
+				document.getElementsByClassName("total")[0].value = (result + num).toFixed(2);
+				if(num > 0){
+					alert("The total is: " + result + " + food price " + num + " due today");
+					return false;
+				}
+				$(function(){	
+					if(num === 0){
+						alert("Your cart item is empty.");					
+					}
+					window.location.href = "index.html";
+				});
+			}
+			
+
+			//submit info
+			function alertUser(){
+				var value1 = document.getElementsByClassName("total")[0].value;
+				if(value1>1){
+					alert("Your information is submitted. Thank you for your purchase!");
+					window.location.href = "index.html";
+				}
+				else{				
+					alert("Please select two options");
+				}
+			}
+			
+		</script>
+
+		<form>
+			<div class="pickup">
+				<h1>Submit your request:</h1>
+				<p>Please fill out the form below</p><br>
+			
+				<label style="padding-left: 20px;">Address</label><br><br>
+				<div style="padding-left: 50px;">
+					<input type ="email" size="50"/>
+				</div>
+				<br>
+				<label style="padding-left:20px;">Choose your style</label><br><br>
+				<div class="row"> 
+					<div class="column" >
+						<div id="p1">
+							<p style="padding-bottom:10px;" > <b>Classic</b><br><small>This is Classic 
+							treatment</small><br><input type="radio" class="price" name="pickup" value="3" checked></p>
+						</div>
+					</div>
+
+					<div class="column">
+						<div id="p1">
+							<p style="padding-bottom:10px;"><b>Premium</b> <br>
+							<small>Pinky's up</small><br><br><input type="radio" value="5"  name="pickup" class="price"></p>
+						</div>
+					</div>
+					<div class="column">
+						<div id="p1">
+							<p><b>Royal</b> <br>
+							<small>Your food is served on a silver platter Literaly</small><br><input type="radio" value="10"  name="pickup" class="price"></p>
+						</div>
+					</div>
+				</div>
+				<br><br>
+				<label style="padding-left: 20px;">Restaurant</label><br><br>
+				<div style="padding-left: 50px;">
+					<input type ="text" size="40"/>
+				</div>
+				<br>
+				<label style="padding-left:20px;">Tip</label>
+				<div class="row">
+					<div class="column">
+						<div id="p1" >
+							<p style="padding-bottom:10px;" ><b>10%</b><br><small>They did their job</small><br><br><input type="radio" class="tip"
+							name="order" value="0.10"  onclick="myFunction()" ></p>
+						</div>
+					</div>
+					<div class="column">
+						<div id="p1"> 
+							<p style="padding-bottom:15px;"><b>15%</b><br><small>They made you feel special</small><br><input type="radio" value="0.15" name="order" class="tip" onclick="myFunction()" ></p>
+						</div>
+					</div>
+					<div class="column">
+						<div id="p1"> 
+							<p style="padding-bottom:5px;"><b>20%</b><br><small>I wanna give them more,but this is ok I have</small><br><input type="radio" value="0.20" name="order" class="tip" onclick="myFunction()"></p>
+						</div>
+					</div>
+				</div><br>
+				<div>
+					<p style="margin-left:400px;">Total:<input style="border-style:none;" type="text" class="total"   value="" ></p><br>
+					<div style="margin-left:400px;">
+						<input type="button" id="num" name="val"   value="Request"  onclick="alertUser()">
+					</div> 
+				</div><br>
+				<div class="thickLine"> </div>
+			</div>
+		</form>
+	</body>
+	<p><a href="index.html">Home page</a></p>
+</html>
+>>>>>>> 1b038bb352ee22bad56d87a99d6216a9e4292c9d:pickupRequest.html
