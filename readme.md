@@ -8,7 +8,7 @@
 > ***index.html & index.js:***
 
 * Added jQuery feature to print user name on screen and a link to displayItems page.    
-* Includes animated banner text and checkZipcode functions.    
+* Included animated banner text and checkZipcode functions.    
 * Attached other links like policy, terms and About  
 * Added validation check for zipcode in Javascript and html attributes.
 
@@ -18,17 +18,17 @@
 > ***about.html & about.js:***
 
   * Inserted zipcode validation function using array find and html attributes
-  * Displays user name, promotional text message and closeBanner button
-  * Adds in jQuery code for user name retrieval and display on screen
+  * Displayed user name, promotional text message and closeBanner button
+  * Added in jQuery code for user name retrieval and display on screen
   * Provided a link to displayItems page upon user validation
 
 <br>
 <br>
 
 > ***register.html & register.js***
-  * Saves form data in Local Storage in a web browser
-  * Validates fewer form fields, if fails, user re-enters all the required info
-  * Validates the fields, if passes, directs user to Sign In page
+  * Saved form data in Local Storage in a web browser
+  * Validated fewer form fields, if fails, user re-enters all the required info
+  * Validated the fields, if passes, directs user to Sign In page
   
 <br>
 <br>
@@ -45,21 +45,20 @@
 
   * Uses AngularJS ng-repeat to iterate over array collection
   * Contains running text across the screen at the top
-  * Created Customized text using JavaScript template string
+  * Creates Customized text using JavaScript template string
   * Prints array items in a tabular form along with checkbox next to row
   * Calculates the total upon number of selected checkboxes
-  * Stored the total amount in total variable in Local Storage in a web browser
+  * Stores the total amount in total variable in Local Storage in a web browser
   * Provides a link to pickupRequest page to complete the order
   
 <br>
 <br> 
 
 > ***serviceRequest.html & serviceRequest.js:***
-  * Contains serving style and tips layout using html and css
+  * Contains serving style and tips layout using HTML and CSS
   * Validates if cart is empty using jquery and redirects to Home page
-  * If cart contains items and prints the total on screen
-  * Request button pops a message about order completed and
-  * directs user back to Home page
+  * Performs if cart contains items then prints the total on screen
+  * Request button pops a message about order completed and directs user back to Home page
 
 <br>
 <br>
